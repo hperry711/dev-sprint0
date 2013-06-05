@@ -1,6 +1,6 @@
 # Text answers from Week 0
 
-# Name:
+# Hunter Perry
 
 
 
@@ -12,8 +12,10 @@ Explain what each of the following lines does. Use the terminology you learned f
 	wait_for_user()
 
 Answer:
-
-
+#"from TurtleWorld import *" imports the TurtleWorld module in Swampy.
+#" world = TurtleWorld()
+	bob = Turtle()" creates a TurtleWorld called world and creates a Turtle named bob
+#"wait_for_user()" tells TurtleWorld to was for the user to act.
 
 
 
@@ -21,13 +23,22 @@ Answer:
 These questions pertain to the program you wrote in Week0.
 
 -- What are the arguments of polygon()?  What type is each argument?
-Answer:
+Answer: The argument is the value assigned to the function. For my first polygon the argument is 91 which is the length of each side of the polygon. For my second polygon, the arguments are 10 (the number of sides) and 40 (the length of each side).
 
 -- What two turtle functions did you use to draw the sides of the polygon?
-Answer:
+Answer: 1. def polygon(t, n, length):
+    angle = 360.0 / n
+    for i in range(n):
+        fd(t, length)
+        lt(t, angle)
+        2. def circle(t, r):
+    circumference = 2 * math.pi * r
+    n = int(circumference / 3) + 1
+    length = circumference / n
+    polygon(t, n, length) 
 
 -- What are the arguments for polyline?  What type is each argument?
-Answer:
+Answer: The arguments for polyline are t (bob), n (the number of sides), length, and angle.
 
 
 
@@ -36,10 +47,10 @@ Answer:
 Suppose you wrote a function, center_circle(), that draws a circle of a given radius around the current location of the turtle and restores the turtle to its starting point.
 
 -- What turtle functions would you use to move the turtle from the center to the edge of the circle and get ready to call the original circle() function?
-Answer:
+Answer: pu(), bk(), rt(), pd()
 
 -- Suppose the interface of this function requires the turtle to end up in the same place it started, facing in the same direction it started.
-Answer:
+Answer: fd(), pu(), rt()
 
 -- What is this type of requirement called?
-Answer:
+Answer: postconditions
